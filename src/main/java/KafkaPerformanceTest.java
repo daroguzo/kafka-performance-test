@@ -143,9 +143,9 @@ public class KafkaPerformanceTest {
                     byte[] valueBytes = record.value().getBytes();
 
                     // 컨슈머 ID 기입
-                    System.arraycopy(String.format("%-10s", consumerID).getBytes(), 0, valueBytes, 20, 10);
+                    System.arraycopy(String.format("%-10s", consumerID).getBytes(), 0, valueBytes, 21, 10);
                     // ConsumeTime 기입
-                    System.arraycopy(consumeTimestamp.getBytes(), 0, valueBytes, 63, 23);
+                    System.arraycopy(consumeTimestamp.getBytes(), 0, valueBytes, 67, 23);
 
                     // String logEntry = String.format("%s %s %s %s %s %s%n",
                     //     String.format("%-20s", logComponents[0]), // TopicPartition
